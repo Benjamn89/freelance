@@ -1,0 +1,123 @@
+#check {
+  height: auto;
+  background: #f2f2f2;
+  padding: 9vh 8vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  & > a {
+    padding: 20px 50px;
+    background: linear-gradient(to left, #f77b63 0%, #f43e54 100%);
+    border-radius: 50px;
+    width: 385px;
+    color: #fff;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 18px;
+    &:hover {
+      background: linear-gradient(to right, #f77b63 0%, #f43e54 100%);
+    }
+  }
+}
+.check-title {
+  top: 0;
+  position: absolute;
+  font-size: 130px;
+  color: rgba(0, 0, 0, 0.1);
+}
+.check-first-title {
+  h1 {
+    font-size: 50px;
+    font-weight: 400;
+  }
+  p {
+    font-weight: 500;
+    margin: 20px 0 40px 0;
+    font-size: 17px;
+  }
+}
+.check-ul {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  //   background: blue;
+  width: fit-content;
+  justify-content: space-evenly;
+  li {
+    padding: 0 2vw 2vh 2vw;
+    border-bottom: 3px #fff solid;
+    cursor: pointer;
+    &:hover {
+      border-color: #f44255;
+    }
+    a {
+      font-size: 20px;
+    }
+  }
+  .check-li-on {
+    border-color: #f44255;
+  }
+}
+a[href="check"] {
+  pointer-events: none;
+}
+.check-inside-content {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+  & > div {
+    border: 1px solid #dcdcdc;
+    padding: 30px 35px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    & > div {
+      h2 {
+        font-size: 20px;
+        font-weight: 500;
+      }
+      margin-left: 20px;
+      overflow: visible;
+      img {
+        max-height: 40px;
+        min-height: 40px;
+      }
+      p {
+        margin-top: 10px;
+        line-height: 1.5;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #check {
+    padding: 9vh 2vw;
+  }
+  .check-inside-content {
+    & > div {
+      padding: 15px 35px;
+    }
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .check-inside-content {
+    flex-direction: column;
+    & > div {
+      padding: 30px 35px;
+    }
+  }
+  .check-ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    li {
+      padding-bottom: 15px;
+    }
+  }
+  .check-title {
+    display: none;
+  }
+}

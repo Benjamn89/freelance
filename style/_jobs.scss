@@ -1,0 +1,74 @@
+#jobs {
+  height: auto;
+  position: relative;
+  padding: 10vh 3vw;
+  background: #fff;
+}
+.jobs-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: rgba(246, 246, 246, 0.87);
+  font-size: 100px;
+}
+.jobs-title-fix {
+  h1 {
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  p {
+    font-weight: 500;
+  }
+}
+.jobs-my-jobs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 40px;
+  & > div {
+    position: relative;
+    width: 30%;
+    padding-top: 25%; /* 1:1 Aspect Ratio */
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    box-shadow: 0 0 10px #e2e2e2;
+    cursor: pointer;
+  }
+  div:nth-child(1) {
+    background-image: url("../media/jobs/sted.png");
+  }
+  div:nth-child(2) {
+    background-image: url("../media/jobs/toy-shop.png");
+  }
+  div:nth-child(3) {
+    background-image: url("../media/jobs/Minyan-project.PNG");
+  }
+  div:nth-child(4) {
+    background-image: url("../media/jobs/grimaldi.jpg");
+  }
+}
+
+@media only screen and (max-width: 1270px) {
+  .jobs-my-jobs {
+    flex-wrap: wrap;
+    & > div {
+      width: 40%;
+      padding-top: 35%;
+    }
+  }
+}
+@media only screen and (max-width: 750px) {
+  .jobs-my-jobs {
+    margin-top: 50px;
+    & > div {
+      min-width: 276px;
+      width: 65%;
+      padding-top: 65%;
+    }
+  }
+}
