@@ -1823,6 +1823,8 @@ body * {
   width: 100px;
   -webkit-transition: 1s;
   transition: 1s;
+  -webkit-animation: preSpinner 1s infinite;
+          animation: preSpinner 1s infinite;
 }
 
 .pre-load-scale {
