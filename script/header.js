@@ -11,8 +11,9 @@ feature();
 
 // On Load event
 window.addEventListener("load", () => {
-  document.querySelector(".spinner").classList.add("pre-load-scale");
+  document.querySelector(".spinner").style.animation = "";
   setTimeout(() => {
+    document.querySelector(".spinner").classList.add("pre-load-scale");
     document.querySelector(".spinner").classList.add("pre-load-off");
     document.querySelector(".big-wrapper").classList.add("big-wrapper-on");
   }, 1000);
