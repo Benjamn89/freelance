@@ -8,6 +8,16 @@ howTo();
 topPro();
 jobs();
 feature();
+
+// On Load event
+window.addEventListener("load", () => {
+  document.querySelector(".spinner").classList.add("pre-load-scale");
+  setTimeout(() => {
+    document.querySelector(".spinner").classList.add("pre-load-off");
+    document.querySelector(".big-wrapper").classList.add("big-wrapper-on");
+  }, 1000);
+});
+
 const closeNavIphone = () => {
   document
     .querySelector(".nav-open-phone")
@@ -87,23 +97,20 @@ document
     }, 2000);
   });
 // Open service
-let top;
 const bgBlack = document.querySelector(".bg-black-all");
+const myHtml = document.getElementsByTagName("html")[0];
 const cancelModal = (e) => {
   bgBlack.classList.add("bg-black-off");
   setTimeout(() => {
     bgBlack.classList.remove("bg-black-on");
     bgBlack.classList.remove("bg-black-off");
-    document.body.classList.remove("body-off");
+    myHtml.classList.remove("html-hide");
   }, 500);
 };
 document.querySelector(".navbar-service-on").addEventListener("click", (e) => {
   e.preventDefault();
-  top = document.documentElement.scrollTop;
-  document.body.style.top = -top + "px";
-  document.body.classList.add("body-off");
-  // document.querySelector(".body-off").style.top = -top + "px";
   bgBlack.classList.add("bg-black-on");
+  myHtml.classList.add("html-hide");
   bgBlack.focus();
   bgBlack.addEventListener("click", (e) => {
     if (e.target.className.length > 2) {

@@ -26,9 +26,43 @@ html {
 body * {
   overflow-y: hidden;
 }
-.body-off {
-  position: fixed;
-  transition: unset;
+.html-hide {
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+}
+.big-wrapper {
+  display: none;
+}
+.big-wrapper-on {
+  display: unset !important;
+}
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  img {
+    height: 100px;
+    width: 100px;
+    transition: 1s;
+    // animation: preSpinner 1s infinite;
+  }
+}
+.pre-load-scale {
+  transform-origin: 100% 0;
+  opacity: 0;
+}
+.pre-load-off {
+  display: none !important;
+}
+@keyframes preSpinner {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 p {
   font-size: 17px;
