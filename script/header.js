@@ -11,7 +11,7 @@ feature();
 
 // On Load event
 window.addEventListener("load", () => {
-  document.querySelector(".spinner").style.animation = "";
+  document.querySelector(".spinner img").style.animation = "";
   setTimeout(() => {
     document.querySelector(".spinner").classList.add("pre-load-scale");
     document.querySelector(".spinner").classList.add("pre-load-off");
