@@ -12,6 +12,23 @@
     />
   </head>
   <body>
+    <div class="bg-black-all" tabindex="0">
+      <div>
+        <h1>תמיכה טכנית</h1>
+        <p>הזן שם עסק, מס' טלפון, שמך ותיאור הבעיה</p>
+        <input type='text' placeholder="שם החברה" />
+        <input type='text' placeholder='שם מלא' />
+        <input type='email' placeholder="דוא''ל" />
+        <input type='number' placeholder="מס' טלפון" />
+        <p>פרטו מהות הפניה</p>
+        <textarea></textarea>
+        <a href="">שלח</a>
+        <div class='bg-inside'>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
     <section id="header">
       <div class="video-wrapper">
         <video src="media/video2.mp4" autoplay loop muted></video>
@@ -19,15 +36,15 @@
       <div class="header-info">
         <div class="h-info-whats">
           <img src="media/whatsup.svg" alt="benjamn-whatsup" />
-          <a href="#">whatsapp</a>
+          <a href="https://api.whatsapp.com/send?phone=972507933868">whatsapp</a>
         </div>
         <div class="h-info-skype">
           <img src="media/skype.svg" alt="benjamn" />
-          <a href="#">skype</a>
+          <a href="skype:BenjaMN89">skype</a>
         </div>
         <div class="h-info-email">
           <img src="media/email.svg" alt="" />
-          <a href="#">דוא''ל</a>
+          <a href="mailto:newbennytal@gmail.com">דוא''ל</a>
         </div>
         <div class="header-hamburger">
           <div></div>
@@ -36,15 +53,15 @@
         </div>
       </div>
       <div class="nav-open-phone">
-        <a href="">דף הבית</a>
-        <a href="">אודות</a>
-        <a href="">שרותי החברה</a>
-        <a href="">תהליך העבודה</a>
-        <a href="">פרוייקטים</a>
-        <a href="">תיק עבודות</a>
-        <a href="">בלוג</a>
-        <a href="">צור קשר</a>
-        <a href="">שאלות נפוצות</a>
+        <a href="#header">דף הבית</a>
+        <a href="#about">אודות</a>
+        <a href="#our-service">שרותי החברה</a>
+        <a href="#how-to">תהליך העבודה</a>
+        <a href="#top-pro">פרוייקטים</a>
+        <a href="#jobs">תיק עבודות</a>
+        <a href="#contact">בלוג</a>
+        <a href="#contact">צור קשר</a>
+        <a href="#contact">שאלות נפוצות</a>
         <a href="">פתח קריאת שרות</a>
         <div class="open-phone-exit">
           <div></div>
@@ -56,25 +73,25 @@
       </div>
       <nav>
         <div class="navbar-big-screen">
-          <a href="">דף הבית</a>
-          <a href="">אודות</a>
-          <a href="">שרותי החברה</a>
-          <a href="">תהליך העבודה</a>
-          <a href="">פרוייקטים</a>
-          <a href="">תיק עבודות</a>
-          <a href="">בלוג</a>
-          <a href="">צור קשר</a>
-          <a href="">שאלות נפוצות</a>
+          <a href="#header">דף הבית</a>
+          <a href="#about">אודות</a>
+          <a href="#our-service">שרותי החברה</a>
+          <a href="#how-to">תהליך העבודה</a>
+          <a href="#top-pro">פרוייקטים</a>
+          <a href="#jobs">תיק עבודות</a>
+          <a href="#contact">בלוג</a>
+          <a href="#contact">צור קשר</a>
+          <a href="#contact">שאלות נפוצות</a>
           <a href="" class="navbar-service-on">פתח קריאת שרות</a>
         </div>
       </nav>
 
       <div class="header-direct-to">
         <div class="direct-to-a-header">
-          <a href="">רעיון</a>
-          <a href="">ניתוח</a>
-          <a href="">תכנות</a>
-          <a href="">קידום-הצלחה!</a>
+          <a href="#how-to">רעיון</a>
+          <a href="#how-to">ניתוח</a>
+          <a href="#how-to">תכנות</a>
+          <a href="#how-to">קידום-הצלחה!</a>
         </div>
         <h1 class="direct-to-title">
           אתרים איכותיים ומערכות בטכנולוגיות מובילות ומתקדמות
@@ -86,7 +103,11 @@
           <input type="text" placeholder="שם מלא" />
           <input type="email" name="" id="" placeholder="דוא''ל" />
           <input type="number" name="" id="" placeholder="טלפון" />
-          <button type="submit">שלח בקשה</button>
+          <button type="">שלח בקשה <svg width="124" height="83" viewBox="0 0 124 83" fill="none" xmlns="http://www.w3.org/2000/svg" class='header-svg'>
+            <path d="M123 2V81L93 49L123 2Z" fill="#F77B63" stroke="black"/>
+            <path d="M118 2V82" stroke="black"/>
+            <path d="M3.94402 0.5H60H116L59.5012 16.9788L3.94402 0.5ZM1 81.5V4.68668L15.0113 69.6055L15.0864 69.9539L15.4403 69.9964L111.15 81.5H1ZM88.1464 51.3536L117.81 81.0169L34.3314 58.0725L2.3904 2.29498L59.173 51.3783L59.4973 51.6585L59.8238 51.381L117.464 2.3867L88.0727 50.7403L87.8688 51.0759L88.1464 51.3536ZM59.5027 50.3415L4.02206 2.38358L59.2704 30.9442L59.4981 31.0619L59.7266 30.9457L115.938 2.37171L59.5027 50.3415Z" fill="#F43E54" stroke="black"/>
+            </svg></button>
         </form>
       </div>
     </section>
@@ -552,18 +573,85 @@
             </div>
             <div class="jobs-my-jobs">
               <div>
-                <div></div>
+                <div>
+                  <h1>Sted</h1>
+                  <p>רשת חברתית שהוקמה ע''י טכנולוגיות המתקדמות ביותר בתחום כמו: <br/ ></p>
+                  ...React, Redux, thunk
+                </div>
               </div>
               <div>
-                <div></div>
+                <div>
+                  <h1>Toy Shop</h1>
+                  <p>חנות וירטואלית שמוכרת צעצועים יד שניה <br />
+                 בפרוייקט שמתי דגש יותר על עיצוב מודרני עם שימוש בתוכנות כמו <br />
+                Figma ו photoShop <br />
+              עם זאת נעשה שימוש גם ב React/ Redux על מנת לתת חווית גלישה מהירה ללקוח.</p>
+                </div>
               </div>
               <div>
-                <div></div>
+                <div>
+                  <h1>Minyan</h1>
+                  <p>פרוייקט גמר ראשון שלי שבא לתת מענה לאזרחים שמעוניים להתעדכן על תפילות שמתקיימים באזורם. <br />
+                  בפיתוח הפרוייקט השתמשתי בטכנולוגיות כמו: <br />
+                NodeJS, ExpresJS, SendGrid, MongoDB</p>
+                </div>
               </div>
               <div>
-                <div></div>
+                <div>
+                  <h1>Released Your Car</h1>
+                  <p>אתר נחיתה סטנדרטי שהקמתי עבורי שבו אני מפרסם שירותים לשחרור רכבים מנמל אשדוד</p>
+                </div>
               </div>
-              <!-- <div></div> -->
+              <div class='jobs-to-load'>
+                <div>
+                  <h1>Web CV</h1>
+                  <p>פורטפוליו מקצועי</p>
+                </div>
+              </div>
+            </div>
+            <p class='jobs-p' href="jobs-load">טען עוד</p>
+          </section>
+          <section id="feature">
+            <div class="feature-background-div"></div>
+            <div class="feature-inside">
+              <h1>ביצוע אפיון <br />
+              לפיתוח אחר</h1>
+              <p>נא הקלד את שמך, דואר אלקטרוני ומס' טלפון ואנחנו נשלח לך טופס אפיון בהקדם האפשרי לדואר</p>
+              <input type='text' placeholder="שם מלא"/>
+              <input type='email' placeholder="דוא''ל"  class='feature-email'/>
+              <input type='number' placeholder="מס' טלפון" />
+              <a href="" class="feature-a">שלח</a>
+              <svg width="124" height="83" viewBox="0 0 124 83" fill="none" xmlns="http://www.w3.org/2000/svg" class='feature-svg'>
+                <path d="M123 2V81L93 49L123 2Z" fill="#F77B63" stroke="black"/>
+                <path d="M118 2V82" stroke="black"/>
+                <path d="M3.94402 0.5H60H116L59.5012 16.9788L3.94402 0.5ZM1 81.5V4.68668L15.0113 69.6055L15.0864 69.9539L15.4403 69.9964L111.15 81.5H1ZM88.1464 51.3536L117.81 81.0169L34.3314 58.0725L2.3904 2.29498L59.173 51.3783L59.4973 51.6585L59.8238 51.381L117.464 2.3867L88.0727 50.7403L87.8688 51.0759L88.1464 51.3536ZM59.5027 50.3415L4.02206 2.38358L59.2704 30.9442L59.4981 31.0619L59.7266 30.9457L115.938 2.37171L59.5027 50.3415Z" fill="#F43E54" stroke="black"/>
+                </svg>
+            </div>
+          </section>
+          <section id="contact">
+            <div></div>
+            <div>
+              <div>
+                <img src="media/Logo.svg" alt="" />
+                <a href="">BinyaminTal.netlify.com</a>
+              </div>
+              <div>
+                <a href="">אודותינו</a>
+                <a href="">ששאלות נפוצות</a>
+                <a href="">בלוג</a>
+                <a href="">שירותי החברה</a>
+                <a href="">תהליך העבודה</a>
+              </div>
+              <div>
+                <a href="">מה הוא האתר שלך?</a>
+                <a href="">טופ פרויקטים</a>
+                <a href="">תיק עבודות</a>
+                <a href="">לקוחות החברה</a>
+              </div>
+              <div>
+                <a href="tel:0507933868">0507933868</a>
+                <a href="mailto:newbennytal@gmail.com">BenjaMN@gmail.com</a>
+              </div>
             </div>
           </section>
           <script src="script/header.js" type="module"></script>

@@ -5,7 +5,12 @@
 @import "check";
 @import "top-pro";
 @import "jobs";
+@import "feature";
+@import "contact";
 
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +26,10 @@
 body * {
   overflow-y: hidden;
 }
+.body-off {
+  position: fixed;
+  transition: unset;
+}
 p {
   font-size: 17px;
 }
@@ -28,6 +37,128 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+.bg-black-all {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(30, 30, 30, 0.856);
+  z-index: 900;
+  transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  animation: bgBlack 0.5s forwards;
+  & > div {
+    height: 70vh;
+    width: 450px;
+    background: #fff;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    * {
+      user-select: none;
+    }
+    h1 {
+      font-weight: 400;
+      margin-bottom: 1.5vh;
+    }
+    p:nth-child(2) {
+      margin-bottom: 4vh;
+    }
+    input {
+      width: 80%;
+      margin-bottom: 3vh;
+      border: none;
+      outline: none;
+      border-bottom: solid 0.5px #f43e54;
+      font-size: 17px;
+      padding: 0 5px 5px 0;
+    }
+    p:nth-child(7) {
+      margin-bottom: 3.5vh;
+    }
+    textarea {
+      outline: none;
+      border: none;
+      border-bottom: solid 0.5px #f43e54;
+      direction: ltr;
+      width: 80%;
+      text-align: right;
+      font-size: 17px;
+    }
+    a {
+      padding: 22px 60px;
+      background: linear-gradient(to right, #f77b63 0%, #f43e54 100%);
+      border-radius: 50px;
+      color: #fff;
+      width: 80%;
+      text-align: center;
+      margin-top: 4vh;
+      font-size: 17px;
+      &:hover {
+        background: linear-gradient(to left, #f77b63 0%, #f43e54 100%);
+      }
+    }
+    & > div {
+      position: absolute;
+      background: lightgrey;
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
+      left: 50%;
+      top: 3vh;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:hover > div {
+        background: #fff;
+      }
+      & > div {
+        height: 15px;
+        width: 2px;
+        background: black;
+        border-radius: 10px;
+        position: absolute;
+        pointer-events: none;
+      }
+      div:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      div:nth-child(2) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+@keyframes bgBlack {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.bg-black-on {
+  display: flex;
+}
+.bg-black-off {
+  animation: bgBlackOff 0.5s forwards;
+}
+@keyframes bgBlackOff {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 #header {
   position: relative;
@@ -152,7 +283,16 @@ input[type="number"]::-webkit-outer-spin-button {
     }
   }
 }
-
+.navbar-big-scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 900;
+  border-radius: unset;
+  margin: unset;
+  justify-content: space-evenly;
+}
 .nav-open-phone {
   position: absolute;
   left: 0;

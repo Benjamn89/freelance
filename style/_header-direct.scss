@@ -2,6 +2,7 @@
   width: 80vw;
   margin: 50px auto 0 auto;
   color: #fff;
+  overflow: visible;
   .direct-to-a-header {
     & > a {
       color: #fff;
@@ -12,6 +13,7 @@
     }
   }
   & > form {
+    overflow: visible;
     & > input,
     & > button {
       height: 60px;
@@ -30,15 +32,39 @@
       color: #fff;
       font-size: 18px;
       font-weight: 500;
+      position: relative;
+      overflow: visible;
       &:hover {
         background: linear-gradient(to right, #f77b63 0%, #f43e54 100%);
       }
     }
     & > input {
       padding-right: 40px;
-      font-size: 20px;
+      font-size: 17px;
     }
   }
+}
+.header-button-off {
+  pointer-events: none;
+}
+.header-svg {
+  position: absolute;
+  height: 40px;
+  width: 35px;
+  bottom: 15%;
+  left: -60px;
+  transform: scaleY(0);
+  transition: 0.5s;
+  transform-origin: 100% 0;
+}
+.header-svg-on {
+  transform: scaleY(1);
+  animation: featureSvg 1s infinite;
+  animation-delay: 0.5s;
+  transform-origin: unset;
+}
+.header-input-red {
+  border: solid 3px #f43e54 !important;
 }
 ::placeholder {
   color: #000;
@@ -76,6 +102,10 @@
         margin: 0 auto 20px auto;
       }
     }
+  }
+  .header-svg {
+    bottom: -60px;
+    left: 48%;
   }
 }
 

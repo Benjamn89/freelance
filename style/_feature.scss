@@ -1,0 +1,110 @@
+#feature {
+  background-image: url("../media/feature/feature.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+  margin-top: 6vh;
+  position: relative;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  .feature-background-div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(244, 66, 85, 0.2);
+    z-index: 1;
+  }
+}
+.feature-inside * {
+  width: 80%;
+}
+.feature-inside {
+  position: relative;
+  background: #fff;
+  height: 80%;
+  max-width: 475px;
+  width: 100%;
+  z-index: 2;
+  border-radius: 30px;
+  box-shadow: 0px 0px 43px 23px rgba(0, 0, 0, 0.3);
+  margin: 0 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  p {
+    line-height: 1.5;
+    margin-bottom: 40px;
+  }
+  input {
+    width: 80%;
+    align-self: center;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: solid 0.5px;
+    outline: none;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0 5px 0 5px;
+    line-height: 2;
+    border-color: #f44154;
+  }
+  a {
+    background: linear-gradient(to left, #f77b63 0%, #f43e54 100%);
+    color: #fff;
+    text-align: center;
+    border-radius: 50px;
+    padding: 22px 0;
+    font-size: 22px;
+    margin-top: 20px;
+    &:hover {
+      background: linear-gradient(to right, #f77b63 0%, #f43e54 100%);
+    }
+  }
+}
+.feature-a-off {
+  pointer-events: none;
+}
+.feature-input-red {
+  border: solid 0.5px red !important;
+  border-radius: 10px !important;
+}
+.feature-svg {
+  position: absolute;
+  bottom: 1.3vh;
+  left: 48%;
+  z-index: 3;
+  height: 30px;
+  width: 30px;
+  transform: scaleY(0);
+  transition: 0.5s;
+  transform-origin: 100% 0;
+}
+.feature-svg-on {
+  transform: scaleY(1);
+  animation: featureSvg 1s infinite;
+  animation-delay: 0.5s;
+  transform-origin: unset !important;
+}
+
+@keyframes featureSvg {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-height: 890px) {
+  #feature {
+    height: 100vh;
+  }
+}
