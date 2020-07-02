@@ -49,6 +49,9 @@ body * {
     animation: preSpinner 1s infinite;
   }
 }
+.spinner-img-stop {
+  animation-play-state: paused !important;
+}
 .pre-load-scale {
   transform-origin: 100% 0;
   opacity: 0;

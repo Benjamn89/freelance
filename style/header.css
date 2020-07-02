@@ -1827,6 +1827,11 @@ body * {
           animation: preSpinner 1s infinite;
 }
 
+.spinner-img-stop {
+  -webkit-animation-play-state: paused !important;
+          animation-play-state: paused !important;
+}
+
 .pre-load-scale {
   -webkit-transform-origin: 100% 0;
           transform-origin: 100% 0;
