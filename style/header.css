@@ -1818,7 +1818,7 @@ body * {
   height: 100vh;
 }
 
-.spinner img {
+.spinner svg {
   height: 100px;
   width: 100px;
   -webkit-transition: 1s;
@@ -2404,12 +2404,6 @@ i #header > {
 @media only screen and (max-width: 540px) {
   .logo-div > img {
     height: 50px;
-  }
-}
-
-@media only screen and (max-width: 380px) and (max-height: 820px) {
-  .video-wrapper video {
-    display: none;
   }
 }
 /*# sourceMappingURL=header.css.map */

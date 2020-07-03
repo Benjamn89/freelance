@@ -11,6 +11,13 @@ jobs();
 feature();
 modals();
 
+// Stop load the video no phones
+document.addEventListener("DOMContentLoaded", () => {
+  if (screen.width < 820) {
+    document.getElementsByTagName("video")[0].removeAttribute("autoplay");
+  }
+});
+
 // On Load event
 window.addEventListener("load", () => {
   document.querySelector(".spinner").classList.add("pre-load-scale");
