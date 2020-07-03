@@ -49,10 +49,8 @@ body * {
     animation: preSpinner 1s infinite;
   }
 }
-.spinner-img-stop {
-  animation-play-state: paused !important;
-}
 .pre-load-scale {
+  transition: 1.5s;
   transform-origin: 100% 0;
   opacity: 0;
 }
@@ -108,7 +106,7 @@ input[type="number"]::-webkit-outer-spin-button {
     p:nth-child(2) {
       margin-bottom: 4vh;
     }
-    input {
+    & > input {
       width: 80%;
       margin-bottom: 3vh;
       border: none;
@@ -129,7 +127,7 @@ input[type="number"]::-webkit-outer-spin-button {
       text-align: right;
       font-size: 17px;
     }
-    a {
+    & > a {
       padding: 22px 60px;
       background: linear-gradient(to right, #f77b63 0%, #f43e54 100%);
       border-radius: 50px;
@@ -173,6 +171,15 @@ input[type="number"]::-webkit-outer-spin-button {
         transform: rotate(-45deg);
       }
     }
+  }
+}
+.bg-black-inside-off {
+  display: none !important;
+}
+.bg-black-second {
+  height: 60vh !important;
+  & > p {
+    line-height: 1.3;
   }
 }
 @keyframes bgBlack {

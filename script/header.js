@@ -3,17 +3,18 @@ import { howTo } from "./howto.js";
 import { topPro } from "./top-pro.js";
 import { jobs } from "./jobs.js";
 import { feature } from "./feature.js";
+import { modals } from "./modals.js";
 test();
 howTo();
 topPro();
 jobs();
 feature();
+modals();
 
 // On Load event
 window.addEventListener("load", () => {
-  document.querySelector(".spinner img").classList.add("spinner-img-stop");
+  document.querySelector(".spinner").classList.add("pre-load-scale");
   setTimeout(() => {
-    document.querySelector(".spinner").classList.add("pre-load-scale");
     document.querySelector(".spinner").classList.add("pre-load-off");
     document.querySelector(".big-wrapper").classList.add("big-wrapper-on");
   }, 1000);
@@ -97,31 +98,3 @@ document
       }
     }, 2000);
   });
-// Open service
-const bgBlack = document.querySelector(".bg-black-all");
-const myHtml = document.getElementsByTagName("html")[0];
-const cancelModal = (e) => {
-  bgBlack.classList.add("bg-black-off");
-  setTimeout(() => {
-    bgBlack.classList.remove("bg-black-on");
-    bgBlack.classList.remove("bg-black-off");
-    myHtml.classList.remove("html-hide");
-  }, 500);
-};
-document.querySelector(".navbar-service-on").addEventListener("click", (e) => {
-  e.preventDefault();
-  bgBlack.classList.add("bg-black-on");
-  myHtml.classList.add("html-hide");
-  bgBlack.focus();
-  bgBlack.addEventListener("click", (e) => {
-    if (e.target.className.length > 2) {
-      cancelModal();
-    }
-  });
-  bgBlack.addEventListener("keyup", (e) => {
-    if (e.keyCode === 27) {
-      cancelModal();
-    }
-  });
-  document.querySelector(".bg-inside").addEventListener("click", cancelModal);
-});

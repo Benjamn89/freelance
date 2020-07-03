@@ -1827,12 +1827,9 @@ body * {
           animation: preSpinner 1s infinite;
 }
 
-.spinner-img-stop {
-  -webkit-animation-play-state: paused !important;
-          animation-play-state: paused !important;
-}
-
 .pre-load-scale {
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
   -webkit-transform-origin: 100% 0;
           transform-origin: 100% 0;
   opacity: 0;
@@ -1932,7 +1929,7 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-bottom: 4vh;
 }
 
-.bg-black-all > div input {
+.bg-black-all > div > input {
   width: 80%;
   margin-bottom: 3vh;
   border: none;
@@ -1956,7 +1953,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 17px;
 }
 
-.bg-black-all > div a {
+.bg-black-all > div > a {
   padding: 22px 60px;
   background: -webkit-gradient(linear, left top, right top, from(#f77b63), to(#f43e54));
   background: linear-gradient(to right, #f77b63 0%, #f43e54 100%);
@@ -1968,7 +1965,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 17px;
 }
 
-.bg-black-all > div a:hover {
+.bg-black-all > div > a:hover {
   background: -webkit-gradient(linear, right top, left top, from(#f77b63), to(#f43e54));
   background: linear-gradient(to left, #f77b63 0%, #f43e54 100%);
 }
@@ -2016,6 +2013,18 @@ input[type="number"]::-webkit-outer-spin-button {
 .bg-black-all > div > div div:nth-child(2) {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+.bg-black-inside-off {
+  display: none !important;
+}
+
+.bg-black-second {
+  height: 60vh !important;
+}
+
+.bg-black-second > p {
+  line-height: 1.3;
 }
 
 @-webkit-keyframes bgBlack {
