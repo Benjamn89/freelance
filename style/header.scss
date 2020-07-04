@@ -33,13 +33,13 @@ body * {
   }
 }
 .big-wrapper {
-  // display: none;
+  display: none;
 }
 .big-wrapper-on {
   display: unset !important;
 }
 .spinner {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;

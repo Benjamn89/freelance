@@ -4,14 +4,12 @@ import { topPro } from "./top-pro.js";
 import { jobs } from "./jobs.js";
 import { feature } from "./feature.js";
 import { modals } from "./modals.js";
-import { chat } from "./chat.js";
 test();
 howTo();
 topPro();
 jobs();
 feature();
 modals();
-chat();
 // Stop load the video no phones
 document.addEventListener("DOMContentLoaded", () => {
   if (screen.width < 820) {
@@ -20,13 +18,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // On Load event
-window.addEventListener("load", () => {
-  document.querySelector(".spinner").classList.add("pre-load-scale");
-  setTimeout(() => {
-    document.querySelector(".spinner").classList.add("pre-load-off");
-    document.querySelector(".big-wrapper").classList.add("big-wrapper-on");
-  }, 1000);
-});
+if (screen.width < 820) {
+  document.querySelector(".spinner").classList.add("pre-load-off");
+  document.querySelector(".big-wrapper").classList.add("big-wrapper-on");
+} else {
+  window.addEventListener("load", () => {
+    document.querySelector(".spinner").classList.add("pre-load-scale");
+    setTimeout(() => {
+      document.querySelector(".spinner").classList.add("pre-load-off");
+      document.querySelector(".big-wrapper").classList.add("big-wrapper-on");
+    }, 1000);
+  });
+}
 
 const closeNavIphone = () => {
   document
