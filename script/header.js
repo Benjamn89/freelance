@@ -13,7 +13,8 @@ modals();
 // Stop load the video no phones
 document.addEventListener("DOMContentLoaded", () => {
   if (screen.width < 820) {
-    document.getElementsByTagName("video")[0].removeAttribute("autoplay");
+    // document.getElementsByTagName("video")[0].removeAttribute("autoplay");
+    document.getElementsByTagName("video")[0].remove();
   }
 });
 
