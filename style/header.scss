@@ -43,10 +43,7 @@ body * {
   align-items: center;
   height: 100vh;
   svg {
-    height: 100px;
-    width: 100px;
-    transition: 1s;
-    animation: preSpinner 1s infinite;
+    overflow: visible !important;
   }
 }
 .pre-load-scale {
@@ -57,12 +54,18 @@ body * {
 .pre-load-off {
   display: none !important;
 }
-@keyframes preSpinner {
-  from {
-    transform: rotate(0);
+.spinner-triangle {
+  animation: triangle 1s linear infinite;
+}
+@keyframes triangle {
+  0% {
+    transform: translateX(0);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 p {

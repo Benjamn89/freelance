@@ -1813,12 +1813,7 @@ body * {
 }
 
 .spinner svg {
-  height: 100px;
-  width: 100px;
-  -webkit-transition: 1s;
-  transition: 1s;
-  -webkit-animation: preSpinner 1s infinite;
-          animation: preSpinner 1s infinite;
+  overflow: visible !important;
 }
 
 .pre-load-scale {
@@ -1833,25 +1828,38 @@ body * {
   display: none !important;
 }
 
-@-webkit-keyframes preSpinner {
-  from {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+.spinner-triangle {
+  -webkit-animation: triangle 1s linear infinite;
+          animation: triangle 1s linear infinite;
+}
+
+@-webkit-keyframes triangle {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+  50% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
-@keyframes preSpinner {
-  from {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+@keyframes triangle {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+  50% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
