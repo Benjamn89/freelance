@@ -7,6 +7,7 @@
 @import "jobs";
 @import "feature";
 @import "contact";
+@import "chat";
 
 html {
   scroll-behavior: smooth;
@@ -32,13 +33,13 @@ body * {
   }
 }
 .big-wrapper {
-  display: none;
+  // display: none;
 }
 .big-wrapper-on {
   display: unset !important;
 }
 .spinner {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   height: 100vh;

@@ -4,13 +4,14 @@ import { topPro } from "./top-pro.js";
 import { jobs } from "./jobs.js";
 import { feature } from "./feature.js";
 import { modals } from "./modals.js";
+import { chat } from "./chat.js";
 test();
 howTo();
 topPro();
 jobs();
 feature();
 modals();
-
+chat();
 // Stop load the video no phones
 document.addEventListener("DOMContentLoaded", () => {
   if (screen.width < 820) {
