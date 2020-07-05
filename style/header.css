@@ -2154,7 +2154,7 @@ i #header > {
           flex-direction: column;
 }
 
-.header-info > div > img {
+.header-info > div > svg {
   height: 30px;
 }
 
