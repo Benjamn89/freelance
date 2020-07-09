@@ -3,7 +3,11 @@ export const jobs = () => {
     document.querySelector(".jobs-p").classList.add("jobs-p-on");
     setTimeout(() => {
       document.querySelector(".jobs-my-jobs").classList.add("jobs-my-jobs-on");
-      document.querySelector(".jobs-to-load").classList.add("jobs-to-load-on");
+      for (var i = 0; i <= 1; i++) {
+        document
+          .querySelectorAll(".jobs-to-load")
+          [i].classList.add("jobs-to-load-on");
+      }
     }, 500);
   });
 };

@@ -1409,14 +1409,18 @@ a[href="check"] {
 }
 
 .jobs-my-jobs div:nth-child(3) {
-  background-image: url("../media/jobs/Minyan-project.PNG");
+  background-image: url("../media/jobs/oled.png");
 }
 
 .jobs-my-jobs div:nth-child(4) {
-  background-image: url("../media/jobs/grimaldi.jpg");
+  background-image: url("../media/jobs/Minyan-project.PNG");
 }
 
 .jobs-my-jobs div:nth-child(5) {
+  background-image: url("../media/jobs/grimaldi.jpg");
+}
+
+.jobs-my-jobs div:nth-child(6) {
   background-image: url("../media/jobs/profile.png");
 }
 
@@ -1424,7 +1428,8 @@ a[href="check"] {
 .jobs-my-jobs div:nth-child(2) div,
 .jobs-my-jobs div:nth-child(3) div,
 .jobs-my-jobs div:nth-child(4) div,
-.jobs-my-jobs div:nth-child(5) div {
+.jobs-my-jobs div:nth-child(5) div,
+.jobs-my-jobs div:nth-child(6) div {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -1438,7 +1443,8 @@ a[href="check"] {
 .jobs-my-jobs div:nth-child(2):hover div,
 .jobs-my-jobs div:nth-child(3):hover div,
 .jobs-my-jobs div:nth-child(4):hover div,
-.jobs-my-jobs div:nth-child(5):hover div {
+.jobs-my-jobs div:nth-child(5):hover div,
+.jobs-my-jobs div:nth-child(6):hover div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1460,7 +1466,8 @@ a[href="check"] {
 .jobs-my-jobs div:nth-child(2):hover div h1,
 .jobs-my-jobs div:nth-child(3):hover div h1,
 .jobs-my-jobs div:nth-child(4):hover div h1,
-.jobs-my-jobs div:nth-child(5):hover div h1 {
+.jobs-my-jobs div:nth-child(5):hover div h1,
+.jobs-my-jobs div:nth-child(6):hover div h1 {
   font-weight: 400;
   margin-bottom: 25px;
 }
@@ -1469,11 +1476,13 @@ a[href="check"] {
 .jobs-my-jobs div:nth-child(2):hover div p,
 .jobs-my-jobs div:nth-child(3):hover div p,
 .jobs-my-jobs div:nth-child(4):hover div p,
-.jobs-my-jobs div:nth-child(5):hover div p {
+.jobs-my-jobs div:nth-child(5):hover div p,
+.jobs-my-jobs div:nth-child(6):hover div p {
   line-height: 1.5;
 }
 
-.jobs-my-jobs div:nth-child(5) {
+.jobs-my-jobs div:nth-child(5),
+.jobs-my-jobs div:nth-child(6) {
   display: none;
 }
 
